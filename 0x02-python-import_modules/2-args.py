@@ -1,19 +1,17 @@
 #!/usr/bin/python3
-def print_arg(argv):
-    n = len(argv) - 1
 
-     print("{:d} argument.".format(n))
-     return
- else:
-     if n == 1:
-         print("{:d} argument:".format(n))
-     else:
-          print("{:d} arguments:".format(n))
-          i = 1
-          while i <= n:
-              print("{:d}: {:s}".format(i, argv[i]))
-              i += 1
+if __name__ == "__main__":
 
-              if __name__ == "__main__":
-                  import sys
-                  print_arg(sys.argv)
+    import sys
+    inp = sys.argv
+    l_inp = len(inp)
+    if l_inp == 1:
+        print("0 arguments.")
+        exit()
+    elif l_inp == 2:
+        print("1 argument:")
+        print("1: {}".format(inp[1]))
+    else:
+        print("{:d} arguments:".format(l_inp - 1))
+        for idx, i in enumerate(inp[1:]):
+            print("{:d}: {}".format(idx + 1, i))
