@@ -1,1 +1,1 @@
-everything object
+everything is an object
