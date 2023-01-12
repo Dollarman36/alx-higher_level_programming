@@ -1,1 +1,1 @@
-python i/o
+py i/o
